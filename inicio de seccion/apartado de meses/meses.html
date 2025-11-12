@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Seleccionar Mes</title>
+  <link rel="stylesheet" href="syles.css">
+</head>
+<body>
+
+  <h1>Selecciona un mes</h1>
+
+  <div class="meses">
+    <button class="mes" data-link="paginas/enero.html">Enero</button>
+    <button class="mes" data-link="paginas/febrero.html">Febrero</button>
+    <button class="mes" data-link="paginas/marzo.html">Marzo</button>
+    <button class="mes" data-link="paginas/abril.html">Abril</button>
+    <button class="mes" data-link="paginas/mayo.html">Mayo</button>
+    <button class="mes" data-link="paginas/junio.html">Junio</button>
+    <button class="mes" data-link="paginas/julio.html">Julio</button>
+    <button class="mes" data-link="paginas/agosto.html">Agosto</button>
+    <button class="mes" data-link="paginas/septiembre.html">Septiembre</button>
+    <button class="mes" data-link="paginas/octubre.html">Octubre</button>
+    <button class="mes" data-link="./paginas/noviembre.html">Noviembre</button>
+    <button class="mes" data-link="paginas/diciembre.html">Diciembre</button>
+  </div>
+
+  <script>
+    // Seleccionamos todos los botones
+    const botones = document.querySelectorAll("paginas/noviembre.html");
+    
+
+    // Agregamos evento de clic a cada uno
+    botones.forEach(boton => {
+      boton.addEventListener("click", () => {
+        const destino = boton.getAttribute("data-link");
+        window.location.href = destino; // Redirige al archivo correspondiente
+      });
+    });
+  </script>
+
+</body>
+</html>

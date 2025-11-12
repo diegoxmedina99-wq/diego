@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Turnos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>📅 Registro de Turnos - Junio 2025</h1>
+
+  <div class="controls">
+    <label for="precio">💵 Precio por turno:</label>
+    <input type="number" id="precio" value="100" min="0">
+    <button id="limpiar">🧹 Limpiar todo</button>
+  </div>
+
+  <div id="contenedor-tablas"></div>
+
+  <div class="resumen-final">
+    <h2>🧾 Total General</h2>
+    <p><strong>Turnos Totales:</strong> <span id="total-general">0</span></p>
+    <p><strong>Dinero Total:</strong> <span id="dinero-general">$0</span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

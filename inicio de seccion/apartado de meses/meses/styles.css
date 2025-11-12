@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffbea;
+  color: #1e3a8a;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  background-color: #1e3a8a;
+  color: yellow;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+input[type="number"] {
+  width: 80px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #1e3a8a;
+  color: yellow;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #2a4ecf;
+}
+
+.table-container {
+  background: #fff;
+  border: 3px solid #1e3a8a;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+h2 {
+  text-align: center;
+  background: #1e3a8a;
+  color: yellow;
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #1e3a8a;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #fef08a;
+  font-weight: bold;
+}
+
+.resumen-semana {
+  background-color: #fef08a;
+  color: #1e3a8a;
+  padding: 10px;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-weight: bold;
+}
+
+.resumen-final {
+  background: #1e3a8a;
+  color: yellow;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+
+
+

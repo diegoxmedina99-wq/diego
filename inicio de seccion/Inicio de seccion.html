@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bombonerita caja</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .password-field { position: relative; display: inline-flex; align-items: center; }
+            .password-field button { 
+                background: transparent; border: none; cursor: pointer; font-size: 1.1rem; 
+                position: absolute; right: 6px; padding: 4px;
+            }
+            .login-box input { padding-right: 2.2rem; }
+        </style>
+    </head>
+    <body>
+        <h1>Bombonerita</h1>
+        <div class="login-box">
+            <input id="usuario" type="text" placeholder="usuario" required>
+            <div class="password-field">
+                <input id="contrasena" type="password" placeholder="Contraseña" required>
+                <button id="togglePass" type="button" aria-label="Mostrar contraseña">👁️</button>
+            </div>
+            <button id="entrar">Entrar</button>
+            <p id="error" style="color:red; display:none;">Usuario o contraseña incorrectos</p>
+        </div>
+
+        <script>
+            // Dos usuarios permitidos (ejemplo simple, credenciales en cliente)
+            const usuarios = [
+                { user: 'Roman', pass: 'bombonerita1' },
+                { user: 'Diego', pass: 'bombonerita1' }
+            ];
+
+            const boton = document.getElementById('entrar');
+            const userInput = document.getElementById('usuario');
+            const passInput = document.getElementById('contrasena');
+            const toggle = document.getElementById('togglePass');
+            const errorEl = document.getElementById('error');
+
+            boton.addEventListener('click', function () {
+                const u = userInput.value.trim();
+                const p = passInput.value;
+                const encontrado = usuarios.some(x => x.user === u && x.pass === p);
+                if (encontrado) {
+                    // ajustar ruta si es necesario
+                    window.location.href = '../apartado de meses/meses.html';
+                } else {
+                    errorEl.style.display = 'block';
+                }
+            });
+
+            // Al presionar Enter en usuario => ir a contraseña
+            userInput.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    passInput.focus();
+                }
+            });
+
+            // Al presionar Enter en contraseña => intentar entrar
+            passInput.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    boton.click();
+                }
+            });
+
+            // Alternar visibilidad de contraseña
+            toggle.addEventListener('click', function () {
+                if (passInput.type === 'password') {
+                    passInput.type = 'text';
+                    toggle.textContent = '🙈';
+                    toggle.setAttribute('aria-label', 'Ocultar contraseña');
+                } else {
+                    passInput.type = 'password';
+                    toggle.textContent = '👁️';
+                    toggle.setAttribute('aria-label', 'Mostrar contraseña');
+                }
+            });
+        </script>
+    </body>
+</html>
